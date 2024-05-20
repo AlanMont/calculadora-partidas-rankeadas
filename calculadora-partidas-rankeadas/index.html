@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Partidas Rankeadas</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Partidas Rankeadas</h1>
+    </header>
+    <div class="main-container">
+        <div class="left-section">
+            <div class="image-container">
+                <img id="levelTitle" src="/src/images/default.png" alt="Nível Jogador">
+            </div>
+        </div>
+        <div class="middle-section">
+            <div class="input-container">
+                <label for="wins">Vitórias:</label>
+                <input type="number" id="wins"  min="0" value="0">
+                <label for="losses">Derrotas:</label>
+                <input type="number" id="losses" min="0" value="0">
+                <a href="#" id="getData" class="myButton" onclick="calculate()">Calcular</a>
+            </div>
+            <div class="bar-container">
+                <label for="winsBar">Total de Vitórias</label>
+                <div class="bar horizontal-bar"><div id="winBar"></div></div>
+                <label for="lossesBar">Total de Derrotas</label>
+                <div class="bar horizontal-bar"><div id="loseBar"></div></div>
+                <label for="theBalanceBar">Saldo</label>
+                <div class="horizontal-bar-balance" id="backBalance"><div id="balanceBar"></div></div>
+                <span id="result"></span>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="circular-bar-container">
+                <div class="inner-circle">
+                    <span>XP</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
